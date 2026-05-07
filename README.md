@@ -1,6 +1,5 @@
 # Heart Failure Clinical Records 
 # Core idea is to take measurements of (datesage,anaemia,creatinine_phosphokinase,diabetes,ejection_fraction,high_blood_pressure,platelets,serum_creatinine,serum_sodium,sex,smoking,time) and to classiy by death event
-# I handled missing values by dropping rows with NaN. I used LabelEncoder for the target class and StandardScaler to normalize the numerical features, which is essential for the distance-based KNN algorithm
 
 '# CSCI 3329 — Homework 3 Report
 ## 1. Dataset
@@ -14,9 +13,13 @@
 - Encoding and scaling decisions, with rationale
     I used `LabelEncoder` to ensure the target and any categorical features were correctly formatted as integers. I applied `StandardScaler` to all features
 ## 3. Part 2 — Algorithm Comparison
-| Algorithm | Mean Accuracy | Std |
-|-----------|---------------|-----|
-| ... | ... | ... |
+Algorithm            | Mean Accuracy   | Std Deviation  
+-------------------------------------------------------
+Linear Classifier    | 0.6644         | 0.0943
+Logistic Regression  | 0.7356         | 0.0777
+KNN                  | 0.6865         | 0.0825
+Gaussian NB          | 0.7033         | 0.0795
+
 ## 4. Part 3 — Feature Selection
 - Search method and justification
 | Algorithm | Best Feature Subset | Mean Accuracy | Std |
@@ -29,4 +32,4 @@ Page 9 / 12
 CSCI 3329 OOP in Python Spring 2026
 ## 6. Reproduction
 - Python version, key library versions
-- Run command (e.g., `python main.py`)'
+- Run command (e.g., `python main.py`)' 
